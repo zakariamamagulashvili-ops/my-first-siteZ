@@ -1,0 +1,78 @@
+<style>
+  body {
+    background-color: #8e4e83;
+    font-family: sans-serif;
+    text-align: center;
+    padding-top: 50px;
+  }
+  h1 {
+    color: #2c3e50;
+    font-size: 32px;
+  }
+  img {
+    border-radius: 10px;
+    margin: 20px auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+  }
+  button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  button:hover {
+    background-color: #2980b9;
+  }
+  a {
+    display: block;
+    margin-top: 20px;
+    color: #3498db;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<h1>გამარჯობა, ეს ჩემი პირველი ვებგვერდია!</h1>
+
+<!-- აი, აქ არის ჩვენი სურათის თეგი (img) -->
+<img src="https://picsum.photos" alt="ულამაზესი სურათი">
+
+<p>მე ახლახან დავიწყე პროგრამირების სწავლა.</p>
+
+<!-- აქ არის ტექსტის შესაყვანი ველი, სადაც ID დავარქვით "saxeli" -->
+<input type="text" id="saxeli" placeholder="ჩაწერე შენი სახელი">
+
+<button onclick="milocva()">დააჭირე აქ</button>
+
+<!-- აქ კი არის ბმული (ლინკი) -->
+<a href="https://google.com" target="_blank">გადადი Google-ზე</a>
+
+<script>
+  function milocva() {
+    // ეს კოდი იღებს იმ ტექსტს, რასაც input ველში ჩაწერთ
+    var მომხმარებლისსახელი = document.getElementById("saxeli").value;
+    
+    // თუ ველში არაფერი წერია, ზოგადად მიესალმება
+    if (მომხმარებლისსახელი === "") {
+        alert("🎉 გილოცავთ! თქვენ პირველი ინტერაქციული გვერდი აამუშავეთ!");
+    } else {
+        // თუ სახელი წერია, სპეციალურად ამ სახელით მიესალმება!
+        alert("🎉 საღოლ, " + მომხმარებლისსახელი + "! შენ უკვე ნამდვილი კოდი დაწერე!");
+    }
+  }
+</script>
